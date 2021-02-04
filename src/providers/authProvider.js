@@ -4,9 +4,9 @@ import axios from 'axios';
 const authProvider = {
 	// authentication
 	login: ({ username, password }) => axios
-		.post(`${process.env.REACT_APP_URL_API}/admin/login`, { username, password })
+		.post(`${process.env.REACT_APP_URL_API}/admin/users/sign-in`, { username, password })
 		.then(({ data }) => {
-			localStorage.setItem('auth', data.token);
+			localStorage.setItem('auth', data);
 		})
 		.catch((err) => { throw new Error(err.response.data.error); }),
 	checkError: (error) => {
@@ -24,7 +24,7 @@ const authProvider = {
 		const token = localStorage.getItem('auth');
 		if (!token) return Promise.resolve();
 		return axios
-			.post(`${process.env.REACT_APP_URL_API}/admin/logout`, {}, { headers: { Authorization: `Bearer ${token}` } })
+			.post(`${process.env.REACT_APP_URL_API}/admin/users/sign-out`, {}, { headers: { Authorization: `Bearer ${token}` } })
 			.then(() => localStorage.removeItem('auth'))
 			.catch((err) => { throw new Error(err.response.data.error); });
 	},

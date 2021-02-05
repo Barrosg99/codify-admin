@@ -1,6 +1,7 @@
-/* eslint-disable import/prefer-default-export */
 import authProvider from './authProvider';
+import dataProvider from './dataProvider';
 
 export {
   authProvider,
+  dataProvider,
 };

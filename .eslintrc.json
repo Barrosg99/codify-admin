@@ -19,6 +19,8 @@
     ],
     "rules": {
 				"react/jsx-props-no-spreading": ["off"],
-				"no-tabs": "off"
+				"no-tabs": "off",
+				"no-param-reassign": "off",
+				"no-console": "off"
     }
 }

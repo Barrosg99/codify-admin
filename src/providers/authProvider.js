@@ -2,7 +2,6 @@
 import axios from 'axios';
 
 const authProvider = {
-	// authentication
 	login: ({ username, password }) => axios
 		.post(`${process.env.REACT_APP_URL_API}/admin/users/sign-in`, { username, password })
 		.then(({ data }) => {
@@ -33,7 +32,6 @@ const authProvider = {
 		const avatar = 'https://i.redd.it/6nho1rhmo2d51.jpg';
 		return Promise.resolve({ fullName, avatar });
 	},
-	// authorization
 	getPermissions: () => Promise.resolve(),
 
 };

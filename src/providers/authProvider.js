@@ -2,7 +2,6 @@
 import axios from 'axios';
 
 const authProvider = {
-  // authentication
   login: ({ username, password }) => axios
     .post(`${process.env.REACT_APP_URL_API}/users/sign-in`, { username, password })
     .then(({ data }) => {
@@ -32,7 +31,6 @@ const authProvider = {
     const avatar = '/images/favicon.ico';
     return Promise.resolve({ id, fullName, avatar });
   },
-  // authorization
   getPermissions: () => Promise.resolve(),
 
 };

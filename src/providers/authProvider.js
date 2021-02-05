@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const authProvider = {
   login: ({ username, password }) => axios
-    .post(`${process.env.REACT_APP_URL_API}/users/sign-in`, { username, password })
+    .post(`${process.env.REACT_APP_URL_API}/admin/users/sign-in`, { username, password })
     .then(({ data }) => {
       localStorage.setItem('auth', data);
     })
@@ -16,20 +16,21 @@ const authProvider = {
     }
     return Promise.resolve();
   },
-  checkAuth: () => (localStorage.getItem('auth') ? Promise.resolve() : Promise.reject()),
+  checkAuth: () => (localStorage.getItem('auth')
+    ? Promise.resolve()
+    : Promise.reject()),
   logout: () => {
     const token = localStorage.getItem('auth');
     if (!token) return Promise.resolve();
     return axios
-      .post(`${process.env.REACT_APP_URL_API}/users/sign-out`, {}, { headers: { Authorization: `Bearer ${token}` } })
+      .post(`${process.env.REACT_APP_URL_API}/admin/users/sign-out`, {}, { headers: { Authorization: `Bearer ${token}` } })
       .then(() => localStorage.removeItem('auth'))
       .catch((err) => { throw new Error(err.response.data.error); });
   },
   getIdentity: () => {
-    const id = 1;
     const fullName = 'Admin';
-    const avatar = '/images/favicon.ico';
-    return Promise.resolve({ id, fullName, avatar });
+    const avatar = 'https://i.redd.it/6nho1rhmo2d51.jpg';
+    return Promise.resolve({ fullName, avatar });
   },
   getPermissions: () => Promise.resolve(),
 

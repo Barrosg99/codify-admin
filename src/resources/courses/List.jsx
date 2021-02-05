@@ -16,12 +16,12 @@ export default function CoursesList(props) {
     <List {...props}>
       <Datagrid rowClick="edit" title="Cursos cadastrados">
         <TextField source="id" />
-        <ImageField label="Logo" src="imageUrl" />
+        <ImageField label="Logo do curso" source="imageUrl" src="imageUrl" />
         <TextField label="Título" source="title" />
         <TextField label="Descrição" source="description" />
         <ColorField source="color" />
-        <DateField source="createdAt" showTime={false} locales="pt-BR" />
-        <DateField source="updatedAt" showTime={false} locales="pt-BR" />
+        <DateField label="Data de criação" source="createdAt" showTime={false} locales="pt-BR" />
+        <DateField label="Data de alteração" source="updatedAt" showTime={false} locales="pt-BR" />
         <EditButton />
         <ShowButton />
       </Datagrid>

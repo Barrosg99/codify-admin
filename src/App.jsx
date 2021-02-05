@@ -8,10 +8,10 @@ import { authProvider, dataProvider } from './providers';
 import GlobalStyle from './assets/globalStyle';
 
 import {
-  // CreateCourse,
-  // EditCourse,
+  CreateCourse,
+  EditCourse,
   ListCourse,
-  // ShowCourse,
+  ShowCourse,
 } from './resources/courses';
 
 const App = () => (
@@ -23,9 +23,9 @@ const App = () => (
         title="Cursos"
         name="courses"
         list={ListCourse}
-				// edit={EditCourse}
-				// show={ShowCourse}
-				// create={CreateCourse}
+        edit={EditCourse}
+        show={ShowCourse}
+        create={CreateCourse}
         icon={BiBookBookmark}
       />
     </Admin>

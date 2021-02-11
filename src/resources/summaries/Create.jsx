@@ -14,9 +14,14 @@ import {
   minValue,
 } from 'react-admin';
 
+const transform = (data) => ({
+  ...data,
+  topicsQuantity: data.topics.length,
+});
+
 export default function CreateSummaries(props) {
   return (
-    <Create {...props}>
+    <Create {...props} transform={transform}>
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges
@@ -35,11 +40,6 @@ export default function CreateSummaries(props) {
         <NumberInput
           label="Ordem de apresentação"
           source="order"
-          validate={[required(), minValue(1)]}
-        />
-        <NumberInput
-          label="Quantidade de tópicos"
-          source="topicsQuantity"
           validate={[required(), minValue(1)]}
         />
         <NumberInput

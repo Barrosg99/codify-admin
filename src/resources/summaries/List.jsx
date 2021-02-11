@@ -23,7 +23,6 @@ export default function SummariesList(props) {
         </ReferenceField>
         <TextField source="name" label="Capítulo" />
         <NumberField label="Ordem de apresentação" source="order" />
-        <NumberField label="Quantidade de tópicos" source="topicsQuantity" />
         <NumberField label="Quantidade de exercícios" source="exercisesQuantity" />
         <DateField label="Data de criação" source="createdAt" />
         <DateField label="Data de alteração" source="updatedAt" />

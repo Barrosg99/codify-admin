@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Admin, Resource } from 'react-admin';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Reset } from 'styled-reset';
-import { BiBookBookmark } from 'react-icons/bi';
+import { BiBookBookmark, BiDetail } from 'react-icons/bi';
 import { authProvider, dataProvider } from './providers';
 
 import GlobalStyle from './assets/globalStyle';
@@ -13,6 +13,13 @@ import {
   ListCourse,
   ShowCourse,
 } from './resources/courses';
+
+import {
+  EditSummaries,
+  ListSummaries,
+  ShowSummaries,
+  CreateSummaries,
+} from './resources/summaries';
 
 const App = () => (
   <Router>
@@ -27,6 +34,15 @@ const App = () => (
         show={ShowCourse}
         create={CreateCourse}
         icon={BiBookBookmark}
+      />
+      <Resource
+        title="Ementa"
+        name="summaries"
+        list={ListSummaries}
+        show={ShowSummaries}
+        edit={EditSummaries}
+        create={CreateSummaries}
+        icon={BiDetail}
       />
     </Admin>
   </Router>

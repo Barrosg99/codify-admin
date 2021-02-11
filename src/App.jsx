@@ -14,6 +14,13 @@ import {
   ShowCourse,
 } from './resources/courses';
 
+import {
+  EditSummaries,
+  ListSummaries,
+  ShowSummaries,
+  CreateSummaries,
+} from './resources/summaries';
+
 const App = () => (
   <Router>
     <Reset />
@@ -27,6 +34,14 @@ const App = () => (
         show={ShowCourse}
         create={CreateCourse}
         icon={BiBookBookmark}
+      />
+      <Resource
+        title="Ementa"
+        name="summaries"
+        list={ListSummaries}
+        show={ShowSummaries}
+        edit={EditSummaries}
+        create={CreateSummaries}
       />
     </Admin>
   </Router>

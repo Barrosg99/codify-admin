@@ -31,6 +31,10 @@ import {
   TheoriesCreate, TheoriesEdit, TheoriesList, TheoriesShow,
 } from './resources/theories';
 
+import {
+  ExerciseShow, ExercisesList, ExerciseEdit, ExerciseCreate,
+} from './resources/exercises';
+
 const App = () => (
   <Router>
     <Reset />
@@ -71,6 +75,14 @@ const App = () => (
         edit={TheoriesEdit}
         create={TheoriesCreate}
         icon={BiSlideshow}
+      />
+      <Resource
+        title="Exercícios"
+        name="exercises"
+        list={ExercisesList}
+        show={ExerciseShow}
+        edit={ExerciseEdit}
+        create={ExerciseCreate}
       />
     </Admin>
   </Router>

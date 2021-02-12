@@ -1,17 +1,17 @@
-import * as React from 'react';
+import React from 'react';
 import {
-  Datagrid, DateField, EditButton, List, ReferenceField, ShowButton, TextField, UrlField,
+  Datagrid, DateField, EditButton, List, ReferenceField, ShowButton, TextField,
 } from 'react-admin';
 
-export default function TheoriesList(props) {
+export default function ExercisesList(props) {
   return (
     <List {...props}>
-      <Datagrid rowClick="edit" title="Vídeos de teoria dos tópicos">
+      <Datagrid rowClick="edit" title="Exercícios sobre os tópicos">
         <TextField source="id" />
-        <ReferenceField source="topicId" label="Tópico" reference="topics">
+        <ReferenceField source="topicId" reference="topics" label="Tópico">
           <TextField source="name" />
         </ReferenceField>
-        <UrlField source="youtubeUrl" label="Link do Youtube" />
+        <TextField source="description" label="Descrição" />
         <DateField source="createdAt" label="Data de criação" />
         <DateField source="updatedAt" label="Data de alteração" />
         <EditButton />

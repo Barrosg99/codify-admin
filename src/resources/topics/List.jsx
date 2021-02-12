@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Datagrid, DateField, List, NumberField, ReferenceField, TextField,
+  Datagrid, DateField, EditButton, List, NumberField, ReferenceField, ShowButton, TextField,
 } from 'react-admin';
 
 export default function TopicsList(props) {
@@ -15,6 +15,8 @@ export default function TopicsList(props) {
         <NumberField source="order" label="Ordem de apresentação" />
         <DateField source="createdAt" label="Data de criação" />
         <DateField source="updatedAt" label="Data de alteração" />
+        <EditButton />
+        <ShowButton />
       </Datagrid>
     </List>
   );

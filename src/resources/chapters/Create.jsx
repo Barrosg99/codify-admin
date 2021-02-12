@@ -35,11 +35,6 @@ export default function CreateChapters(props) {
           source="order"
           validate={[required(), minValue(1)]}
         />
-        <NumberInput
-          label="Quantidade de exercícios"
-          source="exercisesQuantity"
-          validate={[required(), minValue(1)]}
-        />
       </SimpleForm>
     </Create>
   );

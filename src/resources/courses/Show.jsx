@@ -11,7 +11,7 @@ import { ColorField } from 'react-admin-color-input';
 
 export default function CoursesShow(props) {
   return (
-    <Show {...props}>
+    <Show {...props} title={`Curso #${props.id}`}>
       <SimpleShowLayout>
         <ImageField label="Logo do curso" source="imageUrl" src="imageUrl" />
         <TextField label="Título" source="title" />

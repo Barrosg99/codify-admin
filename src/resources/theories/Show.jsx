@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
   DateField, Show, SimpleShowLayout, UrlField, TextField, ReferenceField,
 } from 'react-admin';
-// import CustomTextField from '../../components/CustomTextField';
 
 export default function TheoriesShow(props) {
   return (

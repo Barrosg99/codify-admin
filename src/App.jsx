@@ -2,7 +2,9 @@ import * as React from 'react';
 import { Admin, Resource } from 'react-admin';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Reset } from 'styled-reset';
-import { BiBookBookmark, BiDetail } from 'react-icons/bi';
+import {
+  BiBookBookmark, BiDetail, BiListUl, BiSlideshow,
+} from 'react-icons/bi';
 import { authProvider, dataProvider } from './providers';
 
 import GlobalStyle from './assets/globalStyle';
@@ -15,11 +17,19 @@ import {
 } from './resources/courses';
 
 import {
-  EditSummaries,
-  ListSummaries,
-  ShowSummaries,
-  CreateSummaries,
-} from './resources/summaries';
+  EditChapters,
+  ListChapters,
+  ShowChapters,
+  CreateChapters,
+} from './resources/chapters';
+
+import {
+  CreateTopic, EditTopic, ListTopic, ShowTopic,
+} from './resources/topics';
+
+import {
+  TheoriesCreate, TheoriesEdit, TheoriesList, TheoriesShow,
+} from './resources/theories';
 
 const App = () => (
   <Router>
@@ -36,13 +46,31 @@ const App = () => (
         icon={BiBookBookmark}
       />
       <Resource
-        title="Ementa"
-        name="summaries"
-        list={ListSummaries}
-        show={ShowSummaries}
-        edit={EditSummaries}
-        create={CreateSummaries}
+        title="Capítulos"
+        name="chapters"
+        list={ListChapters}
+        show={ShowChapters}
+        edit={EditChapters}
+        create={CreateChapters}
         icon={BiDetail}
+      />
+      <Resource
+        title="Tópicos"
+        name="topics"
+        list={ListTopic}
+        show={ShowTopic}
+        edit={EditTopic}
+        create={CreateTopic}
+        icon={BiListUl}
+      />
+      <Resource
+        title="Teorias"
+        name="theories"
+        list={TheoriesList}
+        show={TheoriesShow}
+        edit={TheoriesEdit}
+        create={TheoriesCreate}
+        icon={BiSlideshow}
       />
     </Admin>
   </Router>

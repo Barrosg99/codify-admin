@@ -10,7 +10,7 @@ import {
 
 export default function ChaptersShow(props) {
   return (
-    <Show {...props}>
+    <Show {...props} title={`Capítulo #${props.id}`}>
       <SimpleShowLayout>
         <TextField source="id" />
         <ReferenceField label="Curso" source="courseId" link="show" reference="courses">

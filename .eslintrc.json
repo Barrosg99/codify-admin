@@ -21,6 +21,8 @@
 				"react/jsx-props-no-spreading": ["off"],
 				"no-tabs": "off",
 				"no-param-reassign": "off",
-				"no-console": "off"
+				"no-console": "off",
+				"react/prop-types": [0],
+				"react/destructuring-assignment": [0, "never"]
     }
 }

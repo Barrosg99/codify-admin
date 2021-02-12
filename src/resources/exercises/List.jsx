@@ -5,7 +5,7 @@ import {
 
 export default function ExercisesList(props) {
   return (
-    <List {...props}>
+    <List {...props} title="Exercícios">
       <Datagrid rowClick="edit" title="Exercícios sobre os tópicos">
         <TextField source="id" />
         <ReferenceField source="topicId" reference="topics" label="Tópico">

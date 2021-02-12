@@ -5,7 +5,7 @@ import {
 
 export default function TheoriesList(props) {
   return (
-    <List {...props}>
+    <List {...props} title="Teorias">
       <Datagrid rowClick="edit" title="Vídeos de teoria dos tópicos">
         <TextField source="id" />
         <ReferenceField source="topicId" label="Tópico" reference="topics">

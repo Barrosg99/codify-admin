@@ -5,7 +5,7 @@ import {
 
 export default function TheoryEdit(props) {
   return (
-    <Edit {...props}>
+    <Edit {...props} title={`Teoria #${props.id}`}>
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges
@@ -14,7 +14,6 @@ export default function TheoryEdit(props) {
           source="topicId"
           label="Tópico"
           reference="topics"
-
         >
           <SelectInput
             optionText="name"

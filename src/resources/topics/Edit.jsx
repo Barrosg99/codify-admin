@@ -14,7 +14,7 @@ import {
 
 export default function TopicEdit(props) {
   return (
-    <Edit {...props}>
+    <Edit {...props} title={`Tópicos #${props.id}`}>
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges

@@ -14,7 +14,7 @@ import {
 
 export default function ChaptersEdit(props) {
   return (
-    <Edit {...props}>
+    <Edit {...props} title={`Capítulo #${props.id}`}>
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges

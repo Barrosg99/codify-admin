@@ -6,7 +6,7 @@ import {
 
 export default function TheoriesShow(props) {
   return (
-    <Show {...props}>
+    <Show {...props} title={`Teoria #${props.id}`}>
       <SimpleShowLayout>
         <ReferenceField source="topicId" label="Tópico" reference="topics">
           <TextField source="name" />

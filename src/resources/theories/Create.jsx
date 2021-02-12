@@ -6,7 +6,7 @@ import {
 
 export default function TheoryCreate(props) {
   return (
-    <Create {...props}>
+    <Create {...props} title="Criar Teoria">
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges

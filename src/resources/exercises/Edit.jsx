@@ -5,7 +5,7 @@ import {
 
 export default function ExerciseEdit(props) {
   return (
-    <Edit {...props}>
+    <Edit {...props} title={`Exercício #${props.id}`}>
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges

@@ -13,7 +13,7 @@ import { ColorField } from 'react-admin-color-input';
 
 export default function CoursesList(props) {
   return (
-    <List {...props}>
+    <List {...props} title="Cursos">
       <Datagrid rowClick="edit" title="Cursos cadastrados">
         <TextField source="id" />
         <ImageField label="Logo do curso" source="imageUrl" src="imageUrl" />

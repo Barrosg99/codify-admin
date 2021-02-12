@@ -14,7 +14,7 @@ import {
 
 export default function TopicCreate(props) {
   return (
-    <Create {...props}>
+    <Create {...props} title="Criar Tópico">
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges

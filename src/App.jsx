@@ -3,7 +3,7 @@ import { Admin, Resource } from 'react-admin';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Reset } from 'styled-reset';
 import {
-  BiBookBookmark, BiDetail, BiListUl, BiSlideshow,
+  BiBookBookmark, BiDetail, BiListUl, BiSlideshow, BiBrain,
 } from 'react-icons/bi';
 import { authProvider, dataProvider } from './providers';
 
@@ -48,6 +48,7 @@ const App = () => (
         show={ShowCourse}
         create={CreateCourse}
         icon={BiBookBookmark}
+        options={{ label: 'Cursos' }}
       />
       <Resource
         title="Capítulos"
@@ -57,6 +58,7 @@ const App = () => (
         edit={EditChapters}
         create={CreateChapters}
         icon={BiDetail}
+        options={{ label: 'Capítulos' }}
       />
       <Resource
         title="Tópicos"
@@ -66,6 +68,7 @@ const App = () => (
         edit={EditTopic}
         create={CreateTopic}
         icon={BiListUl}
+        options={{ label: 'Tópicos' }}
       />
       <Resource
         title="Teorias"
@@ -75,6 +78,7 @@ const App = () => (
         edit={TheoriesEdit}
         create={TheoriesCreate}
         icon={BiSlideshow}
+        options={{ label: 'Teorias' }}
       />
       <Resource
         title="Exercícios"
@@ -83,6 +87,8 @@ const App = () => (
         show={ExerciseShow}
         edit={ExerciseEdit}
         create={ExerciseCreate}
+        icon={BiBrain}
+        options={{ label: 'Exercícios' }}
       />
     </Admin>
   </Router>

@@ -12,7 +12,7 @@ import {
 
 export default function ChaptersList(props) {
   return (
-    <List {...props}>
+    <List {...props} title="Capítulos">
       <Datagrid rowClick="edit" title="Ementa dos cursos cadastrados">
         <TextField source="id" />
         <ReferenceField label="Curso" link="show" source="courseId" reference="courses">

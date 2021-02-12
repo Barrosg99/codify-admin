@@ -5,7 +5,7 @@ import {
 
 export default function ExerciseShow(props) {
   return (
-    <Show {...props}>
+    <Show {...props} title={`Exercício #${props.id}`}>
       <SimpleShowLayout>
         <TextField source="id" />
         <ReferenceField source="topicId" label="Tópico" reference="topics">

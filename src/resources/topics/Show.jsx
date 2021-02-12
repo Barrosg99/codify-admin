@@ -7,7 +7,7 @@ import {
 
 export default function TopicShow(props) {
   return (
-    <Show {...props}>
+    <Show {...props} title={`Tópicos #${props.id}`}>
       <SimpleShowLayout>
         <TextField source="id" />
         <ReferenceField source="chapterId" label="Capítulo" reference="chapters">

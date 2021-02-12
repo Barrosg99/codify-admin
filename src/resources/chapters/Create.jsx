@@ -14,7 +14,7 @@ import {
 
 export default function CreateChapters(props) {
   return (
-    <Create {...props}>
+    <Create {...props} title="Criar Capítulo">
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges

@@ -5,7 +5,7 @@ import {
 
 export default function ExerciseCreate(props) {
   return (
-    <Create {...props}>
+    <Create {...props} title="Criar Exercício">
       <SimpleForm
         redirect="show"
         warnWhenUnsavedChanges

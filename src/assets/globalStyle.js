@@ -13,4 +13,9 @@ export default createGlobalStyle`
     color: inherit;
     padding: 0px;
   }
+
+	.ra-rich-text-input .ql-editor {
+		background-color: #2E2E2E;
+		color: white;
+	}
 `;

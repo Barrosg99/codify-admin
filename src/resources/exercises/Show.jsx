@@ -14,6 +14,8 @@ export default function ExerciseShow(props) {
             <TextField source="name" />
           </ReferenceField>
 
+          <TextField source="title" label="Título" />
+
           <DateField source="createdAt" label="Data de criação" />
           <DateField source="updatedAt" label="Data de alteração" />
         </Tab>

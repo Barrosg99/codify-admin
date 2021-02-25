@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import RichTextInput from 'ra-input-rich-text';
 import {
   Create, ReferenceInput, required, SelectInput, SimpleForm, TextInput,
 } from 'react-admin';
-import RichTextInput from 'ra-input-rich-text';
 
 export default function ExerciseCreate(props) {
   return (
@@ -24,8 +24,8 @@ export default function ExerciseCreate(props) {
         </ReferenceInput>
 
         <TextInput
-          source="description"
-          label="Descrição"
+          source="title"
+          label="Título"
           validate={[required()]}
         />
 
@@ -35,6 +35,7 @@ export default function ExerciseCreate(props) {
           formClassName="question-input"
           toolbar={[[{ header: 1 }, { header: 2 }, { color: ['white', 'red', 'yellow'] }], ['bold', 'underline']]}
           helperText="Utilize as ferramentas disponibilizadas"
+          validate={[required()]}
         />
 
         <TextInput
@@ -43,6 +44,7 @@ export default function ExerciseCreate(props) {
           multiline
           fullWidth
           helperText="Assegure-se de que sejam códigos compatíveis com a linguagem"
+          validate={[required()]}
         />
 
         <TextInput
@@ -51,6 +53,7 @@ export default function ExerciseCreate(props) {
           multiline
           fullWidth
           helperText="Assegure-se de que existam 'describe' e 'it' para que os testes possam ser rodados"
+          validate={[required()]}
         />
 
         <TextInput
@@ -59,6 +62,7 @@ export default function ExerciseCreate(props) {
           multiline
           fullWidth
           helperText="Assegure-se de que sejam códigos compatíveis com a linguagem"
+          validate={[required()]}
         />
       </SimpleForm>
     </Create>

@@ -33,28 +33,32 @@ export default function ExerciseCreate(props) {
           source="enunciated"
           label="Enunciado"
           formClassName="question-input"
-          toolbar={[[{ size: ['small', 'large', 'huge'] }, { color: ['white', 'red', 'yellow'] }], ['bold', 'underline']]}
-          options={{
-            theme: 'snow',
-          }}
+          toolbar={[[{ header: 1 }, { header: 2 }, { color: ['white', 'red', 'yellow'] }], ['bold', 'underline']]}
+          helperText="Utilize as ferramentas disponibilizadas"
         />
 
-        <RichTextInput
+        <TextInput
           source="initialCode"
           label="Código inicial do exercício"
-          toolbar={['code-block']}
+          multiline
+          fullWidth
+          helperText="Assegure-se de que sejam códigos compatíveis com a linguagem"
         />
 
-        <RichTextInput
+        <TextInput
           source="testCode"
           label="Código de testes"
-          toolbar={['code-block']}
+          multiline
+          fullWidth
+          helperText="Assegure-se de que existam 'describe' e 'it' para que os testes possam ser rodados"
         />
 
-        <RichTextInput
+        <TextInput
           source="solution"
           label="Solução"
-          toolbar={['code-block']}
+          multiline
+          fullWidth
+          helperText="Assegure-se de que sejam códigos compatíveis com a linguagem"
         />
       </SimpleForm>
     </Create>

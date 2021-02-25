@@ -14,7 +14,7 @@ export default createGlobalStyle`
     padding: 0px;
   }
 
-	.ra-rich-text-input .ql-editor {
+	.question-input .ql-editor {
 		background-color: #2E2E2E;
 		color: white;
 	}

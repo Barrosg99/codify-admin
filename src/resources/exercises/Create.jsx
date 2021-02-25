@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import {
   Create, ReferenceInput, required, SelectInput, SimpleForm, TextInput,
 } from 'react-admin';
-
 import RichTextInput from 'ra-input-rich-text';
 
 export default function ExerciseCreate(props) {
@@ -22,6 +22,7 @@ export default function ExerciseCreate(props) {
             validate={[required()]}
           />
         </ReferenceInput>
+
         <TextInput
           source="description"
           label="Descrição"
@@ -31,10 +32,29 @@ export default function ExerciseCreate(props) {
         <RichTextInput
           source="enunciated"
           label="Enunciado"
+          formClassName="question-input"
           toolbar={[[{ size: ['small', 'large', 'huge'] }, { color: ['white', 'red', 'yellow'] }], ['bold', 'underline']]}
           options={{
             theme: 'snow',
           }}
+        />
+
+        <RichTextInput
+          source="initialCode"
+          label="Código inicial do exercício"
+          toolbar={['code-block']}
+        />
+
+        <RichTextInput
+          source="testCode"
+          label="Código de testes"
+          toolbar={['code-block']}
+        />
+
+        <RichTextInput
+          source="solution"
+          label="Solução"
+          toolbar={['code-block']}
         />
       </SimpleForm>
     </Create>

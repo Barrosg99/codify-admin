@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  DateField, ReferenceField, Show, TextField, TabbedShowLayout, Tab,
+  DateField, ReferenceField, Show, TextField, TabbedShowLayout, Tab, RichTextField,
 } from 'react-admin';
 
 export default function ExerciseShow(props) {
@@ -22,7 +22,7 @@ export default function ExerciseShow(props) {
         </Tab>
 
         <Tab label="enunciado">
-          <TextField source="enunciated" label="Enunciado" />
+          <RichTextField source="enunciated" label="Enunciado" />
         </Tab>
 
         <Tab label="Código inicial">
@@ -34,7 +34,7 @@ export default function ExerciseShow(props) {
         </Tab>
 
         <Tab label="Solução">
-          <TextField source="feedback" label="Solução" />
+          <TextField source="solution" label="Solução" />
         </Tab>
       </TabbedShowLayout>
     </Show>

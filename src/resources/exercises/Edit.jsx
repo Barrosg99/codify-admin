@@ -71,7 +71,7 @@ export default function ExerciseEdit(props) {
         />
 
         <TextInput
-          source="feedback"
+          source="solution"
           label="Solução"
           multiline
           fullWidth

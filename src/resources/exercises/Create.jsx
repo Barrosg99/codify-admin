@@ -43,7 +43,7 @@ export default function ExerciseCreate(props) {
           label="Código inicial do exercício"
           multiline
           fullWidth
-          helperText="Assegure-se de que sejam códigos compatíveis com a linguagem"
+          helperText="Assegure-se de que sejam códigos compatíveis com a linguagem, com nomes relacionados ao exercício"
           validate={[required()]}
         />
 

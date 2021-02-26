@@ -16,8 +16,8 @@ export default function ExerciseShow(props) {
 
           <TextField source="title" label="Título" />
 
-          <DateField source="createdAt" label="Data de criação" />
-          <DateField source="updatedAt" label="Data de alteração" />
+          <DateField source="createdAt" label="Data de criação" locales="pt-BR" />
+          <DateField source="updatedAt" label="Data de alteração" locales="pt-BR" />
         </Tab>
 
         <Tab label="enunciado">

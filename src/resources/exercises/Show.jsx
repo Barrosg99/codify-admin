@@ -15,6 +15,7 @@ export default function ExerciseShow(props) {
           </ReferenceField>
 
           <TextField source="title" label="Título" />
+          <TextField source="language" label="Linguagem" />
 
           <DateField source="createdAt" label="Data de criação" locales="pt-BR" />
           <DateField source="updatedAt" label="Data de alteração" locales="pt-BR" />
@@ -29,11 +30,11 @@ export default function ExerciseShow(props) {
         </Tab>
 
         <Tab label="Código de Testes">
-          <TextField source="testCode" label="Código de testes" />
+          <TextField source="tests" label="Código de testes" />
         </Tab>
 
         <Tab label="Solução">
-          <TextField source="solution" label="Solução" />
+          <TextField source="feedback" label="Solução" />
         </Tab>
       </TabbedShowLayout>
     </Show>

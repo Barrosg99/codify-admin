@@ -6,6 +6,19 @@ import {
 } from 'react-admin';
 
 export default function ExerciseCreate(props) {
+  const languages = [
+    { name: 'TypeScript' },
+    { name: 'JavaScript' },
+    { name: 'PHP' },
+    { name: 'C#' },
+    { name: 'C++' },
+    { name: 'Java' },
+    { name: 'CoffeeScript' },
+    { name: 'Powershell' },
+    { name: 'Python' },
+    { name: 'Ruby' },
+  ];
+
   return (
     <Create {...props} title="Criar Exercício">
       <SimpleForm
@@ -38,6 +51,8 @@ export default function ExerciseCreate(props) {
           validate={[required()]}
         />
 
+        <SelectInput source="language" choices={languages} optionValue="name" />
+
         <TextInput
           source="initialCode"
           label="Código inicial do exercício"
@@ -48,7 +63,7 @@ export default function ExerciseCreate(props) {
         />
 
         <TextInput
-          source="testCode"
+          source="tests"
           label="Código de testes"
           multiline
           fullWidth
@@ -57,7 +72,7 @@ export default function ExerciseCreate(props) {
         />
 
         <TextInput
-          source="solution"
+          source="feedback"
           label="Solução"
           multiline
           fullWidth

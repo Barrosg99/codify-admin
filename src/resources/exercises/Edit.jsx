@@ -4,6 +4,8 @@ import {
   Edit, ReferenceInput, required, SelectInput, SimpleForm, TextInput,
 } from 'react-admin';
 
+import CodeInput from '../../components/CodeInput';
+
 export default function ExerciseEdit(props) {
   const languages = [
     { name: 'TypeScript' },
@@ -50,34 +52,11 @@ export default function ExerciseEdit(props) {
           validate={[required()]}
         />
 
-        <SelectInput source="language" choices={languages} optionValue="name" />
+        <SelectInput source="language" choices={languages} optionValue="name" label="Linguagem" />
 
-        <TextInput
-          source="initialCode"
-          label="Código inicial do exercício"
-          multiline
-          fullWidth
-          helperText="Assegure-se de que sejam códigos compatíveis com a linguagem"
-          validate={[required()]}
-        />
-
-        <TextInput
-          source="tests"
-          label="Código de testes"
-          multiline
-          fullWidth
-          helperText="Assegure-se de que existam 'describe' e 'it' para que os testes possam ser rodados"
-          validate={[required()]}
-        />
-
-        <TextInput
-          source="solution"
-          label="Solução"
-          multiline
-          fullWidth
-          helperText="Assegure-se de que sejam códigos compatíveis com a linguagem"
-          validate={[required()]}
-        />
+        <CodeInput source="initialCode" label="Código inicial do exercício" />
+        <CodeInput source="tests" label="Código de testes" />
+        <CodeInput source="solution" label="Solução" />
       </SimpleForm>
     </Edit>
   );

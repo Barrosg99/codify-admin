@@ -3,6 +3,8 @@ import {
   DateField, ReferenceField, Show, TextField, TabbedShowLayout, Tab, RichTextField,
 } from 'react-admin';
 
+import CodeShowField from '../../components/CodeShowField';
+
 export default function ExerciseShow(props) {
   return (
     <Show {...props} title={`Exercício #${props.id}`}>
@@ -26,15 +28,15 @@ export default function ExerciseShow(props) {
         </Tab>
 
         <Tab label="Código inicial">
-          <TextField source="initialCode" label="Código inicial" />
+          <CodeShowField source="initialCode" />
         </Tab>
 
         <Tab label="Código de Testes">
-          <TextField source="tests" label="Código de testes" />
+          <CodeShowField source="tests" />
         </Tab>
 
         <Tab label="Solução">
-          <TextField source="solution" label="Solução" />
+          <CodeShowField source="solution" />
         </Tab>
       </TabbedShowLayout>
     </Show>

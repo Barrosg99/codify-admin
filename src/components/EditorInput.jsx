@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/dracula.css';
-import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
-import 'codemirror/mode/css/css';
+import 'codemirror/mode/python/python';
+import 'codemirror/mode/coffeescript/coffeescript';
+import 'codemirror/mode/php/php';
+import 'codemirror/mode/ruby/ruby';
+
 import { Controlled as ControlledEditor } from 'react-codemirror2';
 
 export default function EditorInput(props) {
@@ -27,6 +30,7 @@ export default function EditorInput(props) {
           mode: language,
           lineNumbers: true,
           theme: 'dracula',
+          tabSize: 2,
         }}
       />
     </Container>

@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import RichTextInput from 'ra-input-rich-text';
 import {
   Create, ReferenceInput, required, SelectInput, SimpleForm, TextInput,
 } from 'react-admin';
 
 import CodeInput from '../../components/CodeInput';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 export default function ExerciseCreate(props) {
+  const { language, setLanguage } = useContext(LanguageContext);
+
   const languages = [
     { name: 'TypeScript' },
     { name: 'JavaScript' },
@@ -52,7 +55,14 @@ export default function ExerciseCreate(props) {
           validate={[required()]}
         />
 
-        <SelectInput source="language" choices={languages} optionValue="name" label="Linguagem" />
+        <SelectInput
+          source="language"
+          choices={languages}
+          optionValue="name"
+          label="Linguagem"
+          value={language}
+          onChange={(e) => setLanguage(e.target.value.toLowerCase())}
+        />
 
         <CodeInput source="initialCode" label="Código inicial do exercício" />
         <CodeInput source="tests" label="Código de testes" />

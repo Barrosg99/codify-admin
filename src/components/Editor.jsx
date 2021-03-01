@@ -8,7 +8,6 @@ export default function CodeEditor(props) {
   return (
     <Container>
       <EditorInput
-        language="javascript"
         {...other}
       />
     </Container>
